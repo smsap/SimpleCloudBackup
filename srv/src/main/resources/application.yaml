@@ -1,6 +1,16 @@
 ---
+server:
+  port: 8080
 spring:
   config.activate.on-profile: default
 cds:
   datasource:
     auto-config.enabled: false
+  odata-v4.endpoint.path: "/api"
+  security.mock.users:
+    - name: admin
+      password: admin
+      roles:
+        - admin
+    - name: user
+      password: user
