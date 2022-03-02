@@ -12,5 +12,6 @@ entity UploadedFiles : managed {
       storage_backend  :      Association to one fs.StorageBackends @mandatory;
       access_control   : many fs.UserAccessControl                  @mandatory;
       notes            :      String(200);
-      file_audits      :      Association to many fs.FileAudits;
+      file_audits      :      Association to many fs.FileAudits
+                                on file_audits.uploaded_file = $self;
 }

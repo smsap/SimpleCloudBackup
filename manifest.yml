@@ -15,4 +15,3 @@ applications:
   env:
     SPRING_PROFILES_ACTIVE: cloud
   buildpack: java_buildpack
-
